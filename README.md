@@ -1,2 +1,1 @@
-# add-appointments-using-ontap-callback-flutter-event-calendar-
-How to add the appointments using the onTap callback in the Flutter event calendar (SfCalendar)
+**[View document in Syncfusion Flutter Knowledge base](https://www.syncfusion.com/kb/12300/how-to-add-the-appointments-using-the-ontap-callback-in-the-flutter-event-calendar)**
