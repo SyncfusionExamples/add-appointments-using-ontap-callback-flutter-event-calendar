@@ -10,7 +10,7 @@ class TappedAppointment extends StatefulWidget {
 }
 
 class CalendarAppointment extends State<TappedAppointment> {
-  late CalendarDataSource? _dataSource;
+  late CalendarDataSource _dataSource;
 
   @override
   void initState() {
@@ -51,9 +51,9 @@ class CalendarAppointment extends State<TappedAppointment> {
         endTime: calendarTapDetails.date!.add(Duration(hours: 1)),
         subject: 'Tapped appointment',
         color: Colors.greenAccent);
-    _dataSource!.appointments!.add(app);
-    _dataSource!.notifyListeners(
-        CalendarDataSourceAction.add, _dataSource!.appointments!);
+    _dataSource.appointments!.add(app);
+    _dataSource.notifyListeners(
+        CalendarDataSourceAction.add, _dataSource.appointments!);
   }
 
   _DataSource _getDataSource() {
