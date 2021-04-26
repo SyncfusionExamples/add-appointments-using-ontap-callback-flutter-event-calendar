@@ -10,13 +10,7 @@ class TappedAppointment extends StatefulWidget {
 }
 
 class CalendarAppointment extends State<TappedAppointment> {
-  CalendarDataSource? _dataSource;
-
-  @override
-  void initState() {
-    _dataSource = _getDataSource();
-    super.initState();
-  }
+  CalendarDataSource? _dataSource=_DataSource(<Appointment>[]);
 
   @override
   Widget build(BuildContext context) {
