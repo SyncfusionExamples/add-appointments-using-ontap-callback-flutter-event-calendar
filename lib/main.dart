@@ -54,7 +54,7 @@ class CalendarAppointment extends State<TappedAppointment> {
         color: Colors.greenAccent);
     _dataSource.appointments!.add(app);
     _dataSource.notifyListeners(
-        CalendarDataSourceAction.add, _dataSource.appointments!);
+        CalendarDataSourceAction.add, <Appointment>[app]);
   }
 
   _DataSource _getDataSource() {
