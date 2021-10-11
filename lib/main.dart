@@ -46,7 +46,6 @@ class CalendarAppointment extends State<TappedAppointment> {
   }
 
   void calendarTapped(CalendarTapDetails calendarTapDetails) {
-    _dataSource.appointments.clear();
     Appointment app = Appointment(
         startTime: calendarTapDetails.date!,
         endTime: calendarTapDetails.date!.add(Duration(hours: 1)),
