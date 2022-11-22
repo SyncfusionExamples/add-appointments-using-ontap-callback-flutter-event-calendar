@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
-void main() => runApp(TappedAppointment());
+void main() => runApp(const TappedAppointment());
 
 class TappedAppointment extends StatefulWidget {
+  const TappedAppointment({super.key});
+
   @override
   CalendarAppointment createState() => CalendarAppointment();
 }
@@ -27,7 +28,7 @@ class CalendarAppointment extends State<TappedAppointment> {
           child: SfCalendar(
             dataSource: _dataSource,
             onTap: calendarTapped,
-            allowedViews: [
+            allowedViews: const [
               CalendarView.day,
               CalendarView.week,
               CalendarView.workWeek,
@@ -38,7 +39,7 @@ class CalendarAppointment extends State<TappedAppointment> {
               CalendarView.timelineMonth,
               CalendarView.schedule
             ],
-            monthViewSettings: MonthViewSettings(showAgenda: true),
+            monthViewSettings: const MonthViewSettings(showAgenda: true),
           ),
         ),
       ),
@@ -48,7 +49,7 @@ class CalendarAppointment extends State<TappedAppointment> {
   void calendarTapped(CalendarTapDetails calendarTapDetails) {
     Appointment app = Appointment(
         startTime: calendarTapDetails.date!,
-        endTime: calendarTapDetails.date!.add(Duration(hours: 1)),
+        endTime: calendarTapDetails.date!.add(const Duration(hours: 1)),
         subject: 'Tapped appointment',
         color: Colors.greenAccent);
     _dataSource.appointments!.add(app);
@@ -60,7 +61,7 @@ class CalendarAppointment extends State<TappedAppointment> {
     List<Appointment> appointments = <Appointment>[];
     appointments.add(Appointment(
       startTime: DateTime.now(),
-      endTime: DateTime.now().add(Duration(hours: 1)),
+      endTime: DateTime.now().add(const Duration(hours: 1)),
       subject: 'Meeting',
       color: Colors.teal,
     ));
